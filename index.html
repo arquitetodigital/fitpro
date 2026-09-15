@@ -32,6 +32,21 @@ section{padding:68px 0}.eyebrow{display:inline-block;background:var(--green-soft
 @media(max-width:760px){section{padding:50px 0}.wrap{width:min(100% - 32px,1060px)}.hero{padding:42px 0 58px}.pain-list,.method-grid,.cat-grid{grid-template-columns:1fr}.food-grid{grid-template-columns:repeat(2,1fr);gap:10px}.food b{font-size:11px}.bonus-row{flex-direction:column;text-align:center}.gbox{flex-direction:column;text-align:center;padding:29px 22px}.offer-box{padding:30px 20px}.price{font-size:68px}.proof-slot,.proof-img{width:230px;height:340px;flex-basis:230px}.purchase-pop{bottom:12px;left:12px;width:calc(100vw - 24px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track{animation:none;overflow-x:auto}.purchase-pop{transition:none}}
 </style>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1373337974862878');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1373337974862878&ev=PageView&noscript=1"
+/></noscript>
 </head>
 <body>
 <div class="topbar">🌿 FIT.Pro — 120 receitas proteicas • Guia digital • acesso imediato</div>
@@ -82,5 +97,5 @@ ENGENHARIA REVERSA DO SABOR
 <footer>FIT.Pro — Receitas Proteicas · Guia digital.<br>Este material não substitui o acompanhamento individual de um nutricionista ou profissional de saúde.</footer>
 <div class="purchase-pop" id="purchasePop" role="status" aria-live="polite"><div class="pop-icon">✓</div><div class="pop-text"><b id="popName">Ana, de Lisboa, garantiu o FIT.Pro</b><span>Acesso às 120 receitas confirmado há poucos minutos.</span></div><button class="pop-close" type="button" aria-label="Fechar aviso">×</button></div>
 <script>
-const CHECKOUT_URL='#CHECKOUT_URL';document.querySelectorAll('.cta').forEach(button=>{button.href=CHECKOUT_URL;button.addEventListener('click',event=>{if(CHECKOUT_URL==='#CHECKOUT_URL'){event.preventDefault();document.querySelector('#oferta')?.scrollIntoView({behavior:'smooth'})}})});const track=document.querySelector('.track');if(track){const original=[...track.children];original.forEach(item=>track.appendChild(item.cloneNode(true)))}const pop=document.querySelector('#purchasePop');const popName=document.querySelector('#popName');const buyers=['Ana, de Lisboa, garantiu o FIT.Pro','Miguel, do Porto, recebeu o acesso','Inês, de Braga, escolheu o FIT.Pro','João, de Coimbra, garantiu as 120 receitas','Mariana, de Setúbal, recebeu o guia','Rita, de Faro, começou agora'];let popupTimer;function showPurchase(){if(!pop)return;popName.textContent=buyers[Math.floor(Math.random()*buyers.length)];pop.classList.add('show');setTimeout(()=>pop.classList.remove('show'),5200);popupTimer=setTimeout(showPurchase,12000+Math.random()*8000)}setTimeout(showPurchase,6500);document.querySelector('.pop-close')?.addEventListener('click',()=>{pop.classList.remove('show');clearTimeout(popupTimer);popupTimer=setTimeout(showPurchase,18000)});
+const CHECKOUT_URL='https://pay.hotmart.com/N107607386S?checkoutMode=10';document.querySelectorAll('.cta').forEach(button=>{button.href=CHECKOUT_URL;button.addEventListener('click',event=>{if(typeof fbq==='function'){fbq('track','InitiateCheckout')}if(CHECKOUT_URL==='#CHECKOUT_URL'){event.preventDefault();document.querySelector('#oferta')?.scrollIntoView({behavior:'smooth'})}})});const track=document.querySelector('.track');if(track){const original=[...track.children];original.forEach(item=>track.appendChild(item.cloneNode(true)))}const pop=document.querySelector('#purchasePop');const popName=document.querySelector('#popName');const buyers=['Ana, de Lisboa, garantiu o FIT.Pro','Miguel, do Porto, recebeu o acesso','Inês, de Braga, escolheu o FIT.Pro','João, de Coimbra, garantiu as 120 receitas','Mariana, de Setúbal, recebeu o guia','Rita, de Faro, começou agora'];let popupTimer;function showPurchase(){if(!pop)return;popName.textContent=buyers[Math.floor(Math.random()*buyers.length)];pop.classList.add('show');setTimeout(()=>pop.classList.remove('show'),5200);popupTimer=setTimeout(showPurchase,12000+Math.random()*8000)}setTimeout(showPurchase,6500);document.querySelector('.pop-close')?.addEventListener('click',()=>{pop.classList.remove('show');clearTimeout(popupTimer);popupTimer=setTimeout(showPurchase,18000)});
 </script></body></html>
